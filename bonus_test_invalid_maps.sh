@@ -5,12 +5,13 @@ GREEN='\e[1;33m'
 NC='\e[0m'
 
 function test_map(){
-	printf "${GREEN}Testing map: ${BLUE}$1${NC}\n"
+	printf "${GREEN}Testing map: ${BLUE}$TESTER_DIR/$1${NC}\n"
 	echo '['
 	valgrind --quiet ../cub3D_bonus $1
 	echo ']'
 }
 
+TESTER_DIR=$(pwd)
 cd .. && make fclean && make bonus
 test_map maps_bonus/wrong_maps/doublecolor.cub
 test_map maps_bonus/wrong_maps/doubletexture.cub
