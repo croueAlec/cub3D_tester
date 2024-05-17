@@ -13,6 +13,7 @@ function test_map(){
 
 TESTER_DIR=$(pwd)
 cd .. && make re
+cd $TESTER_DIR
 test_map maps/wrong_maps/doublecolor.cub
 test_map maps/wrong_maps/doubletexture.cub
 test_map maps/wrong_maps/empty.cub

@@ -13,6 +13,7 @@ function test_map(){
 
 TESTER_DIR=$(pwd)
 cd .. && make fclean && make bonus
+cd $TESTER_DIR
 test_map maps_bonus/wrong_maps/doublecolor.cub
 test_map maps_bonus/wrong_maps/doubletexture.cub
 test_map maps_bonus/wrong_maps/empty.cub
